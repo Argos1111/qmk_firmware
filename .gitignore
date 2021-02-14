@@ -58,6 +58,7 @@ doxygen/
 .vscode/last.sql
 .vscode/temp.sql
 .vscode/ipch/
+.vscode/settings.json
 .stfolder
 .tags
 
