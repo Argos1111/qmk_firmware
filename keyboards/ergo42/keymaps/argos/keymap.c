@@ -1,4 +1,5 @@
 #include QMK_KEYBOARD_H
+#include"keymap_jp.h"
 
 extern keymap_config_t keymap_config;
 
@@ -22,10 +23,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * `------------------------------------------------'   `------------------------------------------------'
    */
   [BASE] = LAYOUT( \
-    KC_TAB,   KC_Q,    KC_W,   KC_E,    KC_R,             KC_T,     KC_LBRC,        KC_RBRC,  KC_Y,     KC_U,    KC_I,     KC_O,     KC_P,     KC_BSPC, \
-    KC_ESC ,  KC_A,    KC_S,   KC_D,    KC_F,             KC_G,     KC_MINS,        KC_EQL ,  KC_H,     KC_J,    KC_K,     KC_L,     KC_SCLN,  KC_ENT , \
-    KC_LSFT,  KC_Z,    KC_X,   KC_C,    KC_V,             KC_B,     KC_DELT,        KC_QUOT,  KC_N,     KC_M,    KC_COMM,  KC_DOT,   KC_SLSH,  KC_BSLS, \
-    KC_LCTRL, KC_LGUI, KC_LALT, KC_INS, LT(SYMB, KC_ESC), MO(SYMB), SFT_T(KC_SPC),  KC_RSFT,  MO(META), KC_DELT, KC_LEFT,  KC_DOWN,  KC_UP,    KC_RGHT \
+    KC_TAB,   KC_Q,    KC_W,   KC_E,    KC_R,    KC_T,     JP_LBRC,         JP_RBRC,  KC_Y,     KC_U,    KC_I,     KC_O,     KC_P,     KC_BSPC, \
+    KC_ESC ,  KC_A,    KC_S,   KC_D,    KC_F,    KC_G,     JP_MINS,         JP_CIRC,  KC_H,     KC_J,    KC_K,     KC_L,     KC_SCLN,  KC_ENT , \
+    KC_LSFT,  KC_Z,    KC_X,   KC_C,    KC_V,    KC_B,     JP_AT,           KC_QUOT,  KC_N,     KC_M,    KC_COMM,  KC_DOT,   KC_SLSH,  JP_BSLS, \
+    KC_LCTRL, KC_LGUI, KC_LALT, KC_INS, JP_MHEN, MO(SYMB), SFT_T(KC_SPC),   KC_RSFT,  MO(META), JP_HENK, KC_LEFT,  KC_DOWN,  KC_UP,    KC_RGHT \
   ),
 
   /* META
@@ -41,7 +42,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * `------------------------------------------------'   `------------------------------------------------'
    */
   [META] = LAYOUT( \
-    _______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F11 , KC_F12 , KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  _______,\
+    _______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F11 , KC_F12 , KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_DELT,\
     _______, KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    _______, _______, KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    _______,\
     _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,\
     _______, _______, _______, _______, _______, _______, KC_F13 , _______, _______, _______, RESET,   _______, _______, _______ \
